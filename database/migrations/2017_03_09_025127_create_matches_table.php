@@ -38,11 +38,11 @@ class CreateMatchesTable extends Migration
             });
 
             Schema::table('matches', function (Blueprint $table) {
-                $table->foreign('m_homeid')->references('id')->on('matches')->onDelete('cascade');
+                $table->foreign('m_homeid')->references('id')->on('teams')->onDelete('cascade');
             });
 
             Schema::table('matches', function (Blueprint $table) {
-                $table->foreign('m_guestid')->references('id')->on('matches')->onDelete('cascade');
+                $table->foreign('m_guestid')->references('id')->on('teams')->onDelete('cascade');
             });
 
         }
